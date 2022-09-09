@@ -2544,7 +2544,7 @@ apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
   annotations:
-    config.kubernetes.io/depends-on: /namespace/gatekeeper-system
+    config.kubernetes.io/depends-on: /namespaces/gatekeeper-system
   labels:
     gatekeeper.sh/system: "yes"
   name: gatekeeper-mutating-webhook-configuration
@@ -2581,7 +2581,7 @@ apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
   annotations:
-    config.kubernetes.io/depends-on: /namespace/gatekeeper-system
+    config.kubernetes.io/depends-on: /namespaces/gatekeeper-system
   labels:
     gatekeeper.sh/system: "yes"
   name: gatekeeper-validating-webhook-configuration
