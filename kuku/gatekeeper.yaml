@@ -2640,6 +2640,11 @@ webhooks:
   failurePolicy: Fail
   matchPolicy: Exact
   name: check-ignore-label.gatekeeper.sh
+    namespaceSelector:
+      matchExpressions:
+        - key: kubernetes.io/metadata.name
+          operator: NotIn
+          values: ["kube-system","gatekeeper-system"]
   rules:
   - apiGroups:
     - ""
